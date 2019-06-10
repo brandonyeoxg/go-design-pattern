@@ -38,7 +38,6 @@ func (doc *Document) Draw(w io.Writer) error {
 }
 
 func Init() {
-	fmt.Println("Executing Factory pattern...\n")
 	doc := &Document{
 		ShapeFactories: []ShapeFactory{
 			&CircleFactory{},
@@ -46,5 +45,4 @@ func Init() {
 		},
 	}
 	doc.Draw(os.Stdout)
-	fmt.Println("\n\nFactory pattern completed!")
 }

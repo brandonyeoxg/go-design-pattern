@@ -7,7 +7,6 @@ package builder
 import "fmt"
 
 func Init() {
-	fmt.Println("Executing Builder pattern...\n")
 	sender := Sender{}
 	jsonMsg, err := sender.BuildMessage(&JSONMessageBuilder{})
 	if err != nil {
@@ -20,6 +19,4 @@ func Init() {
 		panic(err)
 	}
 	fmt.Println(string(xmlMsg.Body))
-
-	fmt.Println("\n\nBuilder pattern completed!")
 }
