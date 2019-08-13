@@ -7,6 +7,8 @@ import (
 	"github.com/brandonyeoxg/go-design-pattern/creational/builder"
 	"github.com/brandonyeoxg/go-design-pattern/creational/factory"
 	"github.com/brandonyeoxg/go-design-pattern/creational/prototype"
+
+	"github.com/brandonyeoxg/go-design-pattern/structural/adaptor"
 )
 
 func main() {
@@ -14,6 +16,8 @@ func main() {
 	prettifyDemo(builder.Init, "Builder")
 	prettifyDemo(abstractfactory.Init, "Abstract Factory")
 	prettifyDemo(prototype.Init, "Prototype")
+
+	prettifyDemo(adaptor.Init, "Adaptor")
 }
 
 func prettifyDemo(fn func(), patternName string) {
